@@ -20,7 +20,7 @@ golem::fill_desc(
   author_first_name = "Bruno", # Your First Name
   author_last_name = "Rodrigues", # Your Last Name
   author_email = "bruno@brodrigues.co", # Your Email
-  repo_url = NULL # The URL of the GitHub Repo (optional) 
+  repo_url = "https://github.com/b-rodrigues/desperados"  # The URL of the GitHub Repo (optional) 
 )     
 
 ## Set {golem} options ----
@@ -28,14 +28,7 @@ golem::set_golem_options()
 
 ## Create Common Files ----
 ## See ?usethis for more information
-usethis::use_mit_license( name = "Golem User" )  # You can set another license here
 usethis::use_readme_rmd( open = FALSE )
-usethis::use_code_of_conduct()
-usethis::use_lifecycle_badge( "Experimental" )
-usethis::use_news_md( open = FALSE )
-
-## Use git ----
-usethis::use_git()
 
 ## Init Testing Infrastructure ----
 ## Create a template for tests
@@ -47,7 +40,7 @@ golem::use_recommended_deps()
 ## Favicon ----
 # If you want to change the favicon (default is golem's one)
 golem::remove_favicon()
-golem::use_favicon() # path = "path/to/ico". Can be an online file. 
+golem::use_favicon("dev/icon.png") # path = "path/to/ico". Can be an online file. 
 
 ## Add helper functions ----
 golem::use_utils_ui()
