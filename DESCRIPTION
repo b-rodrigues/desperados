@@ -1,25 +1,17 @@
 Package: desperados
-Title: Coronavirus cases explorer
+Title: An Amazing Shiny App
 Version: 0.0.0.9000
-Authors@R: person('Bruno', 'Rodrigues', email = 'bruno@brodrigues.co', role = c('cre', 'aut'))
-Description: This application makes it easy to explore coronavirus positive cases (not official).
-License: MIT + file LICENSE
+Authors@R: 
+    person(given = "firstname",
+           family = "lastname",
+           role = c("aut", "cre"),
+           email = "your@email.com")
+Description: What the package does (one paragraph).
+License: What license is it under?
 Imports: 
     config,
     golem,
-    shiny,
-    processx,
-    attempt,
-    DT,
-    glue,
-    htmltools,
-    echarts4r,
-    tsibble,
-    shinipsum
+    shiny
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.2
-URL: https://github.com/b-rodrigues/desperados
-BugReports: https://github.com/b-rodrigues/desperados/issues
-Suggests: 
-    testthat
+RoxygenNote: 6.1.1
