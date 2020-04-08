@@ -6,5 +6,5 @@
 #' @noRd
 app_server <- function( input, output, session ) {
   # List the first level callModules here
-
+  callModule(mod_plot_of_data_server, "plot_of_data_ui_1")
 }

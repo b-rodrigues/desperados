@@ -3,14 +3,29 @@
 #' @param request Internal parameter for `{shiny}`. 
 #'     DO NOT REMOVE.
 #' @import shiny
+#' @import shinydashboard
 #' @noRd
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # List the first level UI elements here 
-    fluidPage(
-      h1("desperados")
+    dashboardPage(
+      dashboardHeader(title = "Desperados prototype app"),
+      dashboardSidebar(
+        sidebarMenu(
+          menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
+          menuItem("Widgets", tabName = "widgets", icon = icon("th"))
+        )
+      ),
+      dashboardBody(
+        tabItems(
+          tabItem(tabName = "dashboard",
+                  fluidRow(
+                    mod_plot_of_data_ui("plot_of_data_ui_1")
+                  ))
+        )
+      )
     )
   )
 }
