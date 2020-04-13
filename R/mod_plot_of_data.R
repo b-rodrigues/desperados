@@ -9,13 +9,11 @@
 #' @importFrom shiny NS tagList
 mod_plot_of_data_ui <- function(id){
   ns <- NS(id)
-tagList(
-#h2("My random histogram"),
-#dygraphOutput(ns("my_histogram"))
-box(title = "Controls",
-    sliderInput(ns("slider"), "Number of obs:", 1,500,100),
-    width = 2 ),
-box(dygraphOutput(ns("my_histogram")))
+  tagList(
+    box(title = "Controls",
+        sliderInput(ns("slider"), "Number of obs:", 1,500,100),
+        width = 2 ),
+    box(dygraphOutput(ns("my_histogram")))
 )
 }
 
